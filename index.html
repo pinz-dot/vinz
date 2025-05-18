@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=600, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Cool Notes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>Cool Notes</header>
+  <main>
+    <textarea id="noteInput" placeholder="Type your note here..."></textarea>
+    <div class="buttons-row">
+      <button class="add-btn" id="addNoteBtn" title="Add text note">Add Note</button>
+      <label class="upload-label" title="Upload image note">📸 Upload Image
+        <input type="file" id="imageInput" accept="image/*" />
+      </label>
+    </div>
+    <div class="notes-list" id="notesList"></div>
+  </main>
+
+  <!-- Modal for viewing note details -->
+  <div id="modalOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="modalCloseBtn" class="modal-close-btn" title="Close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
